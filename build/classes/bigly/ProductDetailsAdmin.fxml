@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="1039.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bigly.ProductDetailsAdminController">
+   <children>
+      <AnchorPane fx:id="mainPricetxt" layoutX="12.0" layoutY="30.0" prefHeight="675.0" prefWidth="1038.0" style="-fx-background-color: #CD5C5C;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="75.0" layoutY="80.0" prefHeight="35.0" prefWidth="130.0" text="Product ID:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="160.0" prefHeight="35.0" prefWidth="130.0" text="Product Name:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="240.0" prefHeight="35.0" prefWidth="130.0" text="Category:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="320.0" prefHeight="35.0" prefWidth="130.0" text="Main Price:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="400.0" prefHeight="35.0" prefWidth="130.0" text="Offer Price:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="526.0" layoutY="413.0" prefHeight="35.0" prefWidth="130.0" text="Description:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="526.0" layoutY="337.0" prefHeight="35.0" prefWidth="130.0" text="Shot Desc:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id" editable="false" layoutX="210.0" layoutY="80.0" prefHeight="35.0" prefWidth="210.0" />
+            <TextField fx:id="proName" layoutX="210.0" layoutY="160.0" prefHeight="35.0" prefWidth="210.0" />
+            <ComboBox fx:id="comb" layoutX="210.0" layoutY="240.0" prefHeight="35.0" prefWidth="210.0" promptText=" " />
+            <Button layoutX="724.0" layoutY="246.0" mnemonicParsing="false" onAction="#setImg" prefHeight="25.0" prefWidth="118.0" text="Change Image">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <TextField fx:id="mainPriceTxt" layoutX="210.0" layoutY="320.0" prefHeight="35.0" prefWidth="210.0" />
+            <TextField fx:id="offerPricetxt" layoutX="210.0" layoutY="400.0" prefHeight="35.0" prefWidth="210.0" />
+            <Button fx:id="addbtn" layoutX="672.0" layoutY="566.0" mnemonicParsing="false" onAction="#Addproduct" prefHeight="45.0" prefWidth="235.0" style="-fx-background-color: #F08080;" text="Add Record">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="362.0" layoutY="566.0" mnemonicParsing="false" onAction="#clearbtn" prefHeight="45.0" prefWidth="235.0" style="-fx-background-color: #F08080;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="upbtn" layoutX="52.0" layoutY="566.0" mnemonicParsing="false" onAction="#UpdateProduct" prefHeight="45.0" prefWidth="235.0" style="-fx-background-color: #F08080;" text="Update">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextArea fx:id="shortDescTxt" layoutX="669.0" layoutY="328.0" prefHeight="64.0" prefWidth="234.0" />
+            <TextArea fx:id="descTxt" layoutX="669.0" layoutY="415.0" prefHeight="107.0" prefWidth="235.0" scrollTop="1.0" />
+            <ImageView fx:id="img" fitHeight="149.0" fitWidth="175.0" layoutX="720.0" layoutY="77.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Bigly.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="479.0" prefHeight="35.0" prefWidth="130.0" text="Status:" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text layoutX="387.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Info">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Text>
+            <JFXToggleButton fx:id="toggle" alignment="CENTER_LEFT" layoutX="204.0" layoutY="456.0" onAction="#setToggel" prefHeight="80.0" prefWidth="210.0" text="Inactive">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXToggleButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

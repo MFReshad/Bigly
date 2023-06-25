@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="253.0" prefWidth="480.0" style="-fx-background-color: #f073b3;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bigly.CartAddController">
+   <children>
+      <AnchorPane layoutX="64.0" layoutY="22.0" prefHeight="53.0" prefWidth="360.0" style="-fx-background-color: #e01f49;">
+         <children>
+            <Text layoutX="83.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add to Cart">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="m1" contentDisplay="CENTER" layoutX="164.0" layoutY="160.0" onAction="#decrement1" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #00BCD4;">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="16.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/-.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="tx1" alignment="CENTER" layoutX="208.0" layoutY="160.0" prefHeight="25.0" prefWidth="43.0" text="1" />
+      <JFXButton fx:id="p1" contentDisplay="CENTER" layoutX="265.0" layoutY="160.0" onAction="#increment1" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #f44336;" text=" ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/+.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="nam" layoutX="64.0" layoutY="107.0" text="Label">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="377.0" layoutY="204.0" onAction="#add" style="-fx-background-color: #FF9800;" stylesheets="@../../../../../../../2.1/Spring-20/zLAB/SD/CheckInn/src/checkinn/ButtonAdmin.css" text="ADD">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="cancle" layoutX="290.0" layoutY="204.0" onAction="#back" style="-fx-background-color: #4c8aa1;" text="Cancle">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="207.0" layoutY="143.0" text="Quantity" />
+   </children>
+</AnchorPane>

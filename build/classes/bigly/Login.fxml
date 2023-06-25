@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bigly.LoginController">
+   <children>
+      <AnchorPane layoutX="-2.0" layoutY="-2.0" prefHeight="675.0" prefWidth="600.0" style="-fx-background-color: #900C3F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="121.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" textAlignment="CENTER" wrappingWidth="339.79998779296875">
+               <font>
+                  <Font name="AGaramondPro-Bold" size="64.0" />
+               </font>
+            </Text>
+            <Text layoutX="269.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" textAlignment="CENTER">
+               <font>
+                  <Font size="49.0" />
+               </font>
+            </Text>
+            <Text layoutX="182.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bigly" textAlignment="CENTER">
+               <font>
+                  <Font name="Eras Bold ITC" size="87.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.3047619047619048">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8066276907920837" green="0.8421052694320679" blue="0.1325536072254181" opacity="0.9700000286102295" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9320987462997437" green="1.0" blue="0.49074074625968933" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Text>
+            <Text layoutX="149.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="big wholesale market in the world..." textAlignment="CENTER">
+               <font>
+                  <Font name="System Italic" size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnSignup" layoutX="226.0" layoutY="574.0" mnemonicParsing="false" onAction="#openSignUpPanel" style="-fx-background-color: #FF5733;" stylesheets="@ButtonAdmin.css" text="Sign Up">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <JFXButton fx:id="btnAdmin" layoutX="25.0" layoutY="620.0" onAction="#openAdminPanel" ripplerFill="#00000007" text="\@Admin Panel" textFill="#4059a9" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="675.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="195.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log In Page">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnLogin" layoutX="248.0" layoutY="516.0" mnemonicParsing="false" onAction="#Login" style="-fx-background-color: #4059a9;" stylesheets="@ButtonAdmin.css" text="Log In">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <JFXTextField fx:id="txt1field" layoutX="130.0" layoutY="280.0" prefHeight="50.0" prefWidth="350.0" promptText=" Username...">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="pwfield" layoutX="130.0" layoutY="400.0" prefHeight="50.0" prefWidth="350.0" promptText=" Password...">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="btnForgetPass" layoutX="231.0" layoutY="600.0" onAction="#forgetPass" ripplerFill="#00000007" text="Forget Password!!!!" textFill="#281cab" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Text layoutX="205.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

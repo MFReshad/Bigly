@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="875.0" style="-fx-background-color: #86c969;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bigly.ProductAdminController">
+   <children>
+      <TableView fx:id="productTable" layoutX="32.0" layoutY="40.0" prefHeight="467.0" prefWidth="807.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="col_productName" prefWidth="113.66667175292969" text="ProductName" />
+            <TableColumn fx:id="col_cat" prefWidth="97.66665649414062" text="Category" />
+            <TableColumn fx:id="col_mainPrice" prefWidth="97.66665649414062" text="MainPrice" />
+            <TableColumn fx:id="col_offerPrice" prefWidth="97.66665649414062" text="OfferPrice" />
+            <TableColumn fx:id="col_status" prefWidth="97.66665649414062" text="Status" />
+            <TableColumn fx:id="col_shortDesc" prefWidth="107.0" text="ShortDesc" />
+            <TableColumn fx:id="col_img" prefWidth="117.0" text="imageFile" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="760.0" layoutY="534.0" onAction="#addItem" style="-fx-background-color: #04852b;" stylesheets="@ButtonAdmin.css" text="Add Item" />
+      <JFXButton layoutX="681.0" layoutY="534.0" onAction="#editItem" stylesheets="@ButtonAdmin.css" text="Edit" />
+      <JFXButton layoutX="590.0" layoutY="534.0" onAction="#deleteItem" style="-fx-background-color: #cf4b34;" stylesheets="@ButtonAdmin.css" text="Delete" />
+      <JFXButton layoutX="40.0" layoutY="534.0" onAction="#refreshTable" style="-fx-background-color: #f09c2e;" stylesheets="@ButtonAdmin.css" text="Refresh" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="1085.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bigly.SignUpController">
+    <children>
+        <AnchorPane prefHeight="680.0" prefWidth="1085.0" style="-fx-background-color: #d0571b;">
+            <children>
+                <ImageView fitHeight="727.0" fitWidth="658.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/admin.jpg" />
+               </image>
+                </ImageView>
+                <AnchorPane fx:id="infopane" layoutX="676.0" layoutY="22.0" prefHeight="632.0" prefWidth="388.0" stylesheets="@singup%20text.css">
+                    <children>
+                        <Label layoutX="82.0" layoutY="62.0" text="Your Information..." textFill="WHITE">
+                            <font>
+                                <Font name="ACaslonPro-Bold" size="24.0" />
+                            </font>
+                            <effect>
+                                <Glow level="0.86" />
+                            </effect>
+                        </Label>
+                        <JFXTextField fx:id="namefield" focusColor="BLACK" layoutX="45.0" layoutY="130.0" prefHeight="48.0" prefWidth="322.0" promptText="Name" unFocusColor="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="mailfield" focusColor="BLACK" layoutX="45.0" layoutY="190.0" prefHeight="48.0" prefWidth="322.0" promptText="email" unFocusColor="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="passfield" focusColor="BLACK" layoutX="45.0" layoutY="250.0" prefHeight="48.0" prefWidth="322.0" promptText="Password" unFocusColor="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </JFXPasswordField>
+                        <JFXTextField fx:id="addressfield" focusColor="BLACK" layoutX="45.0" layoutY="310.0" prefHeight="48.0" prefWidth="322.0" promptText="Address" unFocusColor="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </JFXTextField>
+                        <Label layoutX="45.0" layoutY="380.0" text="Gender" textFill="#4a4141">
+                            <font>
+                                <Font name="System Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="male" layoutX="125.0" layoutY="384.0" mnemonicParsing="false" onAction="#Itmale" text="Male">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="gender" />
+                            </toggleGroup>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </RadioButton>
+                        <RadioButton fx:id="female" layoutX="206.0" layoutY="384.0" mnemonicParsing="false" onAction="#Itfemale" text="Female" toggleGroup="$gender">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </RadioButton>
+                        <RadioButton fx:id="other" layoutX="302.0" layoutY="384.0" mnemonicParsing="false" onAction="#Itother" text="Other" toggleGroup="$gender">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </RadioButton>
+                        <JFXTextField fx:id="phonefield" focusColor="BLACK" layoutX="45.0" layoutY="410.0" prefHeight="48.0" prefWidth="322.0" promptText="Phone No" unFocusColor="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </JFXTextField>
+                        <CheckBox fx:id="agree" layoutX="45.0" layoutY="490.0" mnemonicParsing="false" onAction="#checkbox" text="Agree with">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </CheckBox>
+                        <JFXButton layoutX="145.0" layoutY="484.5" onAction="#openPDF" text="terms &amp; condition" underline="true">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="signupbtn" disable="true" layoutX="153.0" layoutY="538.0" onAction="#singUpAction" prefHeight="21.0" prefWidth="106.0" ripplerFill="#140f0f" style="-fx-background-color: white;" text="Sign Up">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="118.0" layoutY="593.0" onAction="#openLogin" text="Already have account? Log In.." textFill="WHITE" underline="true">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXTextField fx:id="genderfield" editable="false" layoutX="86.0" layoutY="14.0" visible="false" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="otppane" layoutX="686.0" layoutY="32.0" prefHeight="632.0" prefWidth="388.0" stylesheets="@singup%20text.css" visible="false">
+                    <children>
+                        <Label layoutX="44.0" layoutY="176.0" text="OTP has sent to your email id" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                            <font>
+                                <Font name="ACaslonPro-Bold" size="24.0" />
+                            </font>
+                            <effect>
+                                <Glow level="0.86" />
+                            </effect>
+                        </Label>
+                        <JFXTextField fx:id="enterotp" alignment="CENTER" focusColor="BLACK" layoutX="39.0" layoutY="260.0" prefHeight="48.0" prefWidth="322.0" promptText="Enter your otp here" unFocusColor="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </JFXTextField>
+                        <JFXButton layoutX="146.0" layoutY="351.0" onAction="#submitAction" prefHeight="21.0" prefWidth="106.0" ripplerFill="#140f0f" style="-fx-background-color: white;" text="Submit">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXTextField fx:id="OTP" alignment="CENTER" editable="false" focusColor="BLACK" layoutX="48.0" layoutY="414.0" prefHeight="48.0" prefWidth="112.0" promptText="otp" unFocusColor="WHITE" visible="false">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </JFXTextField>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

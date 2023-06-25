@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bigly.CartController">
+    <children>
+        <AnchorPane layoutX="676.0" layoutY="-5.0" prefHeight="711.0" prefWidth="321.0" style="-fx-background-color: #FFB6C1;">
+            <children>
+                <Label fx:id="totalbill" alignment="CENTER" layoutX="13.0" layoutY="74.0" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: #FF69B4;" text="Total  Bill:">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="prc" alignment="CENTER" layoutX="147.0" layoutY="70.0" prefHeight="42.0" prefWidth="130.0" style="-fx-background-color: #FF69B4;">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                </Label>
+                <Button layoutX="32.0" layoutY="164.0" mnemonicParsing="false" onAction="#confirmbtn" prefHeight="55.0" prefWidth="231.0" style="-fx-background-color: #FF69B4;" text="Get Total Price">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Button layoutX="32.0" layoutY="250.0" mnemonicParsing="false" onAction="#order" prefHeight="55.0" prefWidth="231.0" style="-fx-background-color: #FF69B4;" text="Confirm order">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Label alignment="CENTER" layoutX="-5.0" layoutY="-2.0" prefHeight="78.0" prefWidth="679.0" style="-fx-background-color: #FF69B4;" text="Your  Cart" underline="true">
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="table3" layoutX="-2.0" layoutY="76.0" prefHeight="244.0" prefWidth="675.0">
+            <columns>
+            <TableColumn fx:id="col_orID" prefWidth="75.0" text="Order ID" />
+                <TableColumn fx:id="fdname" prefWidth="294.6666717529297" text="Product Name" />
+                <TableColumn fx:id="fdprice" prefWidth="164.3333282470703" text="Price" />
+                <TableColumn fx:id="fdqt" prefWidth="215.0" text="Quantity" />
+            </columns>
+        </TableView>
+        <Button layoutX="253.0" layoutY="332.0" mnemonicParsing="false" onAction="#removebtn" prefHeight="42.0" prefWidth="207.0" style="-fx-background-color: #FF69B4;" text="Remove">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+        <TableView fx:id="table4" layoutX="1.0" layoutY="448.0" prefHeight="244.0" prefWidth="675.0">
+            <columns>
+                <TableColumn fx:id="fdname1" prefWidth="294.6666717529297" text="Product Name" />
+                <TableColumn fx:id="fdprice1" prefWidth="164.3333282470703" text="Price" />
+                <TableColumn fx:id="fdqt1" prefWidth="215.0" text="Quantity" />
+            </columns>
+        </TableView>
+        <Label alignment="CENTER" layoutX="-1.0" layoutY="393.0" prefHeight="55.0" prefWidth="675.0" style="-fx-background-color: #FF69B4;" text="Your confirmed orders">
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+      <Text layoutX="401.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Unpaid)">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="472.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Paid)">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

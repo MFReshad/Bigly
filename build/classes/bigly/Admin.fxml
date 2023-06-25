@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bigly.AdminController">
+    <children>
+        <AnchorPane prefHeight="640.0" prefWidth="1025.0" style="-fx-background-color: #2a85bd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane layoutX="150.0" prefHeight="44.0" prefWidth="875.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <Label fx:id="AdminTitle" alignment="CENTER" layoutX="399.0" layoutY="13.0" text="Dashboard">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="92.0" onAction="#dashboard" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="DashBoard  ">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/Homepng.png" />
+                            </image>
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="142.0" onAction="#category" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;;" text="Categories">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/checkinPng.png" />
+                            </image>
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="192.0" onAction="#openProduct" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Products">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/UserPng.png" />
+                            </image>
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="242.0" onAction="#sellHistory" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Selling History">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/Foodpng.png" />
+                            </image>
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <ImageView fitHeight="71.0" fitWidth="86.0" layoutX="24.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/Bigly.jpg" />
+                    </image>
+                </ImageView>
+                <BorderPane fx:id="adminMain" layoutX="150.0" layoutY="42.0" prefHeight="600.0" prefWidth="875.0" />
+                <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="537.0" onAction="#logOut" prefHeight="44.0" prefWidth="96.0" style="-fx-background-color: #277db2;" text="Log Out">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/logout-512.png" />
+                            </image>
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutX="-11.0" layoutY="466.0" onAction="#credit" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #277db2;" text="Credit">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/admins.png" />
+                            </image>
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

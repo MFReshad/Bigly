@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="875.0" style="-fx-background-color: #E0E0E0;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bigly.DashboardAdminController">
+    <children>
+        <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="110.0" prefWidth="200.0" styleClass="anchor">
+            <children>
+                <Label layoutX="65.0" layoutY="20.0" text="    Total User : " textAlignment="RIGHT" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="58.0" fitWidth="55.0" layoutX="10.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/users.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="totalUserLbl" contentDisplay="RIGHT" layoutX="140.0" layoutY="55.0" text="0" textFill="WHITE">
+                    <font>
+                        <Font name="Comic Sans MS Bold" size="35.0" />
+                    </font>
+                </Label>
+            </children>
+         <stylesheets>
+            <URL value="@yellowGradinet.css" />
+            <URL value="@pinkGradient.css" />
+         </stylesheets>
+        </AnchorPane>
+        <AnchorPane layoutX="230.0" layoutY="15.0" prefHeight="110.0" prefWidth="200.0" styleClass="anchor">
+            <children>
+                <ImageView fitHeight="50.0" fitWidth="65.0" layoutX="6.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/f5.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="65.0" layoutY="20.0" text="Total Product:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="totalProductLbl" contentDisplay="RIGHT" layoutX="140.0" layoutY="55.0" text="0" textFill="WHITE">
+                    <font>
+                        <Font name="Comic Sans MS Bold" size="35.0" />
+                    </font>
+                </Label>
+            </children>
+            <stylesheets>
+                <URL value="@greenGradient.css" />
+                <URL value="@blueGradient.css" />
+            </stylesheets>
+        </AnchorPane>
+        <AnchorPane layoutX="445.0" layoutY="15.0" prefHeight="110.0" prefWidth="200.0" styleClass="anchor">
+            <children>
+                <ImageView fitHeight="58.0" fitWidth="55.0" layoutX="6.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/category.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="55.0" layoutY="20.0" text="Total Category :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="totalCatLbl" contentDisplay="RIGHT" layoutX="140.0" layoutY="55.0" text="0" textFill="WHITE">
+                    <font>
+                        <Font name="Comic Sans MS Bold" size="35.0" />
+                    </font>
+                </Label>
+            </children>
+            <stylesheets>
+                <URL value="@yellowGradinet.css" />
+                <URL value="@greenGradient.css" />
+            </stylesheets>
+        </AnchorPane>
+        <AnchorPane layoutX="660.0" layoutY="15.0" prefHeight="110.0" prefWidth="200.0" styleClass="anchor" stylesheets="@yellowGradinet.css">
+            <children>
+                <ImageView fitHeight="58.0" fitWidth="55.0" layoutX="6.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/pending.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="60.0" layoutY="20.0" text="Pending Order:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="pendinLbl" contentDisplay="RIGHT" layoutX="140.0" layoutY="55.0" text="0" textFill="WHITE">
+                    <font>
+                        <Font name="Comic Sans MS Bold" size="35.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label fx:id="date" layoutX="713.0" layoutY="139.0" prefHeight="32.0" prefWidth="147.0" style="-fx-background-color: #C6FF00;" text="Date" textAlignment="JUSTIFY">
+            <graphic>
+                <ImageView fitHeight="34.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/Calender%20and%20clock.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Label>
+        <TableView fx:id="table" layoutX="37.0" layoutY="217.0" prefHeight="355.0" prefWidth="788.0" style="-fx-background-color: #90A4AE;">
+            <columns>
+                <TableColumn fx:id="col_bookID" prefWidth="95.0" text="Booking Id" />
+                <TableColumn fx:id="col_userId" prefWidth="55.0" style="-fx-background-color: #E1BEE7;" text="User Id" />
+                <TableColumn fx:id="col_productid" prefWidth="75.0" style="-fx-background-color: #B2EBF2;" text="Product Id" />
+                <TableColumn fx:id="col_category" style="-fx-background-color: #C5CAE9;" text="Category" />
+            <TableColumn fx:id="col_quantity" style="-fx-background-color: #C5DBE8;" text="Quantity" />
+                <TableColumn fx:id="col_phone" prefWidth="155.0" style="-fx-background-color: #C8E6C9;" text="User Phone no" />
+                <TableColumn fx:id="col_mail" prefWidth="125.0" style="-fx-background-color: #FFF9C4;" text="Email" />
+                <TableColumn fx:id="col_regdate" prefWidth="121.0" style="-fx-background-color: #FFE0B2;" text="Registration Time" />
+                <TableColumn fx:id="col_cost" prefWidth="100.0" style="-fx-background-color: #ffcdd2;" text="Total" />
+            </columns>
+        </TableView>
+        <Label layoutX="42.0" layoutY="174.0" text="Latest Booking:">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Line endX="663.0" endY="78.5" layoutX="162.0" layoutY="163.0" startX="-125.0" startY="78.5" strokeWidth="2.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="875.0" style="-fx-background-color: #e8e8e8;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bigly.CategoryAdminController">
+   <children>
+      <TableView fx:id="catTable" layoutX="32.0" layoutY="42.0" onMouseClicked="#getVal" prefHeight="388.0" prefWidth="796.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="399.0" text="ID" />
+          <TableColumn fx:id="col_catName" prefWidth="396.0" text="Category Name" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txt" layoutX="51.0" layoutY="472.0" prefHeight="25.0" prefWidth="174.0" promptText="Category Name" />
+      <JFXButton layoutX="43.0" layoutY="524.0" onAction="#addCategory" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #c3eb34;" text="ADD Category" />
+      <JFXButton layoutX="173.0" layoutY="523.0" onAction="#EditCat" prefHeight="3.0" prefWidth="52.0" style="-fx-background-color: #34cceb;" text="Edit" />
+      <JFXButton layoutX="284.0" layoutY="523.0" onAction="#deleteCAT" prefHeight="3.0" prefWidth="52.0" style="-fx-background-color: #eb4034;" text="Delete" />
+   </children>
+</AnchorPane>
